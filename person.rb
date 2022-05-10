@@ -1,8 +1,11 @@
-class Person
+require './nameable'
+
+class Person < Nameable
   attr_accessor :name, :age
   attr_reader :id
 
   def initialize(age, name = 'Unknown', parent_permission = nil)
+    super()
     @age = age
     @name = name
     parent_permission = true if parent_permission.nil?
@@ -20,10 +23,14 @@ class Person
       false
     end
   end
+
+  def correct_name
+    @name
+  end
 end
 
 # p1 = Person.new(12, 'Behnam', false)
-# p p1
+# p p1.correct_name
 
 # p2 = Person.new(12, 'Behnam')
 # p p2
