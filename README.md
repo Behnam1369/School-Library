@@ -10,6 +10,8 @@ Creating a simple school library program using Ruby to gain more experince in Cl
 
 - [add Person, Student and Teacher classes](https://github.com/microverseinc/curriculum-ruby/blob/main/oop/school_library_people.md).
 
+- [decorate a class](https://github.com/microverseinc/curriculum-ruby/blob/main/oop/school_library_decorator_v2.md).
+
 # screenshot 
 will be added
 
