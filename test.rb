@@ -1,10 +1,16 @@
 # require './person'
-# require './capitalize_decorator'
-# require './trimmer_decorator'
+# require './student'
+# require './teacher'
+# require './book'
+# require './rental'
 
-# person = Person.new(22, 'maximilianus')
-# person.correct_name
-# capitalizedPerson = CapitalizeDecorator.new(person)
-# capitalizedPerson.correct_name
-# capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
-# capitalizedTrimmedPerson.correct_name
+# p1 = Person.new(12, 'Behnam Aghaali')
+# b1 = Book.new('Harry Potter', 'JK Rowling')
+# p1.rent(Time.now, b1)
+# b1.rent(Time.now, p1)
+# b1.rent(Time.now, p1)
+# p1.rent(Time.now, b1)
+
+# p b1.rental_history.length
+# p b1.rental_history[0].book.title
+# p p1.rental_history[0].person.name

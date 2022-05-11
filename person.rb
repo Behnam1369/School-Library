@@ -2,7 +2,7 @@ require './nameable'
 
 class Person < Nameable
   attr_accessor :name, :age
-  attr_reader :id
+  attr_reader :id, :rental_history
 
   def initialize(age, name = 'Unknown', parent_permission = nil)
     super()
@@ -10,6 +10,7 @@ class Person < Nameable
     @name = name
     parent_permission = true if parent_permission.nil?
     @parent_permission = parent_permission
+    @rental_history = []
   end
 
   def of_age?
@@ -27,13 +28,10 @@ class Person < Nameable
   def correct_name
     @name
   end
+
+  def rent(date, book)
+    return if @rental_history.length.positive? && @rental_history[@rental_history.length - 1].person == self
+
+    Rental.new(date, book, self)
+  end
 end
-
-# p1 = Person.new(12, 'Behnam', false)
-# p p1.correct_name
-
-# p2 = Person.new(12, 'Behnam')
-# p p2
-
-# p3 = Person.new(12)
-# p p3

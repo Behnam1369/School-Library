@@ -12,6 +12,8 @@ Creating a simple school library program using Ruby to gain more experince in Cl
 
 - [decorate a class](https://github.com/microverseinc/curriculum-ruby/blob/main/oop/school_library_decorator_v2.md).
 
+- [set up associations](https://github.com/microverseinc/curriculum-ruby/blob/main/oop/school_library_associations.md).
+
 # screenshot 
 will be added
 
