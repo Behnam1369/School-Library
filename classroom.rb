@@ -19,11 +19,3 @@ class Classroom
     student.belongs_to(self)
   end
 end
-
-c1 = Classroom.new("B")
-s1 = Student.new(12, "MAth", "asdsadsad")
-c1.add_student(s1)
-c1.add_student(s1)
-s1.belongs_to(c1)
-
-p c1.student_list.length
